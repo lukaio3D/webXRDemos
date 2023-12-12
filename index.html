@@ -10,7 +10,7 @@
     <script src="app.js"></script>
 </head>
 <body>
-    <a-scene  webxr="optionalFeatures:  hit-test;" ar-hit-test="target:#myobject;">
+    <a-scene device-orientation-permission-ui="enabled: false"  webxr="requiredFeatures:hit-test,local-floor;referenceSpaceType:local-floor;">
         <a-assets>
 <!--             <video id="CAdemoMP4" src="src\231208_CharacterAnimator_Demo.mp4" ></video> -->
             <video id="CAdemoWEBM" src="src\movie-webm.webm" type="video/webm" ></video>

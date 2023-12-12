@@ -11,9 +11,16 @@
     <script src="app.js"></script>
   </head>
   <body>
-    <a-scene xr-mode-ui="ar" webxr="optionalFeatures:  hit-test;" ar-hit-test="target:#myobject;">
+    <a-scene
+      xr-mode-ui="ar"
+      webxr="optionalFeatures:  hit-test;"
+      ar-hit-test="target:#myobject;"
+    >
       <a-assets>
-        <!--             <video id="CAdemoMP4" src="src\231208_CharacterAnimator_Demo.mp4" ></video> -->
+        <video
+          id="CAdemoMP4"
+          src="src\Szene - Chloe (Photoshop) 4.mov"
+        ></video>
         <video
           id="CAdemoWEBM"
           src="src\movie-webm.webm"
@@ -21,15 +28,14 @@
         ></video>
       </a-assets>
       <a-camera position="0 1.2 6"></a-camera>
-      <a-box color="tomato" depth="2" height="4" width="0.5"></a-box>
       <a-entity
         id="myobject"
         class="tpVid"
-        material="shader: transparent-video; src: #CAdemoWEBM"
+        material="shader: transparent-video; src: #CAdemoMP4"
         geometry="primitive: plane;
                   width: 2;
                   height: 2"
-        position="0 1 -2"
+        position="0 1 -2.1"
       >
       </a-entity>
     </a-scene>

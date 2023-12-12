@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A-Frame WebXR Test</title>
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.6/dist/aframe-transparent-video-shader.umd.js"></script>
     <script src="https://launchar.app/sdk/v1?key=LFLwFg3A0oKEgNiVD0kKlDHASmYasdAZ&redirect=true"></script>
@@ -12,7 +12,6 @@
   </head>
   <body>
     <a-scene
-      xr-mode-ui="ar"
       webxr="optionalFeatures:  hit-test;"
       ar-hit-test="target:#myobject;"
     >
@@ -28,10 +27,11 @@
         ></video>
       </a-assets>
       <a-camera position="0 1.2 6"></a-camera>
+      <a-cone color="tomato" radius-bottom="2" radius-top="0.5"></a-cone>
       <a-entity
         id="myobject"
         class="tpVid"
-        material="shader: transparent-video; src: #CAdemoMP4"
+        material="shader: transparent-video; src: #CAdemoWEBM"
         geometry="primitive: plane;
                   width: 2;
                   height: 2"

@@ -10,7 +10,7 @@
     <script src="app.js"></script>
   </head>
   <body>
-    <a-scene xr-mode-ui="XRMode: ar;">
+    <a-scene xr-mode-ui="XRMode: ar;" webxr="optionalFeatures:  hit-test;" ar-hit-test="target:#myobject;">
       <a-assets>
         <video
           id="CAdemoWEBM"
@@ -24,9 +24,9 @@
         ></video>
       </a-assets>
       <a-camera position="0 1.2 6"></a-camera>
-      <a-video src="#CAdemoMP4" position="0 1 -2"></a-video>
-      <a-entity
-        id="myobject"
+      <a-video id="myobject" src="#CAdemoMP4" position="0 1 -2"></a-video>
+<!--       <a-entity
+        
         class="tpVid"
         material="shader: transparent-video; src: #CAdemoWEBM"
         geometry="primitive: plane;
@@ -34,7 +34,7 @@
                     height: 2"
         position="-2 1 -2.1"
       >
-      </a-entity>
+      </a-entity> -->
     </a-scene>
   </body>
 </html>

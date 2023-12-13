@@ -27,7 +27,7 @@
         ></video>
       </a-assets>
       <a-camera position="0 1.2 6"></a-camera>
-<!--       <a-cone color="tomato" radius-bottom="2" radius-top="0.5"></a-cone> -->
+      <a-cone color="tomato" radius-bottom="2" radius-top="0.5" position="-2 0 0"></a-cone>
       <a-entity
         id="myobject"
         class="tpVid"
@@ -37,7 +37,16 @@
                   height: 2"
         position="0 1 -2.1"
       >
-      </a-entity>
+      </a-entity>      <a-entity
+      id="myobject"
+      class="tpVid"
+      material="shader: transparent-video; src: #CAdemoMP4
+      geometry="primitive: plane;
+                width: 2;
+                height: 2"
+      position="1 1 -2.1"
+    >
+    </a-entity>
     </a-scene>
   </body>
 </html>

@@ -12,19 +12,29 @@
   <body>
     <a-scene
       xr-mode-ui="XRMode: ar;"
-      webxr="optionalFeatures:  hit-test;"
-      ar-hit-test="target:#myobject;"
     >
+      
       <a-assets>
-        <video
+<!--         <video
           id="CAdemoWEBM"
           src="src\movie-webm.webm"
           type="video/webm"
+        ></video> -->
+        <video
+          id="CAdemoMP4"
+          src="src\231208_CharacterAnimator_Demo.mp4"
+          type="video/mp4"
         ></video>
       </a-assets>
       <a-camera position="0 1.2 6"></a-camera>
-        <a-cone color="tomato" radius-bottom="2" radius-top="0.5" position="-2 0 0"></a-cone>
-        <a-entity
+      <a-cone
+        color="tomato"
+        radius-bottom="2"
+        radius-top="0.5"
+        position="-2 0 0"
+      ></a-cone>
+      <a-video src="#CAdemoMP4" position = "0 1 -2"></a-video>
+      <!--         <a-entity
         id="myobject"
           class="tpVid"
           material="shader: transparent-video; src: #CAdemoWEBM"
@@ -34,7 +44,7 @@
           position="0 1 -2.1"
         >
         </a-entity> 
-
+ -->
     </a-scene>
   </body>
 </html>

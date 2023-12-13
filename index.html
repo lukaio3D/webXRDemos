@@ -17,19 +17,15 @@
     >
       <a-assets>
         <video
-          id="CAdemoMP4"
-          src="src\Szene - Chloe (Photoshop) 4.mov"
-        ></video>
-        <video
           id="CAdemoWEBM"
           src="src\movie-webm.webm"
           type="video/webm"
         ></video>
       </a-assets>
       <a-camera position="0 1.2 6"></a-camera>
-      <a-entitiy id="myobject">
         <a-cone color="tomato" radius-bottom="2" radius-top="0.5" position="-2 0 0"></a-cone>
         <a-entity
+        id="myobject"
           class="tpVid"
           material="shader: transparent-video; src: #CAdemoWEBM"
           geometry="primitive: plane;
@@ -38,7 +34,6 @@
           position="0 1 -2.1"
         >
         </a-entity> 
-      </a-entitiy>
 
     </a-scene>
   </body>

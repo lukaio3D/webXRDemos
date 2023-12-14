@@ -14,7 +14,7 @@
   <body>
     <!--     Overlay HTML -->
 
-    <div class="fixed bottom-0 z-10 flex algin-center justify-center w-full">
+    <div id="overlay" class="fixed bottom-0 z-10 flex algin-center justify-center w-full">
       <div class="grid grid-col-2 mb-5">
         <h1 class="col-span-2 text-center">Was willst du tun?</h1>
         <button class="pr-5">Frage beantworten</button>
@@ -31,7 +31,7 @@
       </p>
     </div>
     <!--     A-Frame Scene -->
-    <a-scene device-orientation-permission-ui="enabled: false" xr-mode-ui="XRMode: ar;" webxr="optionalFeatures:  dom-overlay;">
+    <a-scene xr-mode-ui="XRMode: ar;" webxr="optionalFeatures:  dom-overlay;">
       <!-- ar-hit-test="target: #myobject;" -->
       <a-assets>
         <img id="ChloeBild" src="src\26130.png" alt="" />

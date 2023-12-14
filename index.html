@@ -12,12 +12,13 @@
   </head>
   <body>
 <!--     Overlay HTML -->
-<div class="fixed">
+<div class="fixed bottom-5 left-5">
+  <p><a href="https://www.freepik.com/free-vector/isolated-tree-white-background_4382376.htm#query=tree%20transparent&position=9&from_view=search&track=ais&uuid=ab3d83fa-029f-4fdd-b2b4-67156b5a246d">Image by brgfx</a> on Freepik</p>
 </div>
 <!--     A-Frame Scene -->
     <a-scene xr-mode-ui="XRMode: ar;" webxr="optionalFeatures:  hit-test;" ar-hit-test="target: #myobject;">
       <a-assets>
-        <img id="ChloeBild" src="src\Szene - Chloe (Photoshop) 4 Frame.png" alt="">
+        <img id="ChloeBild" src="src\tree_Illustration.png" alt="">
         <video
           id="CAdemoWEBM"
           src="src\Chloe-Intro.mp4"
@@ -26,7 +27,8 @@
         ></video>
       </a-assets>
       <a-camera position="0 1.2 6"></a-camera>
-      <a-image id="myobject" src="#ChloeBild"></a-image>
+      <a-image id="myobject-2" src="#ChloeBild" material="" geometry="" position="-3.75292 1.67412 -4.02288" scale="3.34484 3.34484 3.34484"></a-image>
+      <a-image id="myobject-2" src="#ChloeBild" material="" geometry="" position="-0.08105 1.67412 -5" scale="3.34484 3.34484 3.34484"></a-image>
       <a-entity
         id="transparentVid"
         class="tpVid"

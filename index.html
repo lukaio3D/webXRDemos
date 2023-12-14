@@ -12,27 +12,9 @@
     <script src="app.js"></script>
   </head>
   <body>
-    <!--     Overlay HTML -->
-    <div class="fixed bottom-0 z-10 flex algin-center justify-center w-full">
-      <div class="grid grid-col-2 mb-5">
-        <h1 class="col-span-2 text-center">Was willst du tun?</h1>
-        <button class="pr-5">Frage beantworten</button>
-        <button class="">Geschichte hören</button>
-      </div>
-    </div>
-
-    <div class="fixed bottom-5 left-5">
-      <p>
-        <a
-          href="https://www.freepik.com/free-vector/tree-transparent-background_20424342.htm#query=tree%20transparent&position=1&from_view=search&track=ais&uuid=ab3d83fa-029f-4fdd-b2b4-67156b5a246d#position=1&query=tree%20transparent"
-          >Image by brgfx</a
-        >
-        on Freepik on Freepik
-      </p>
-    </div>
     <!--     A-Frame Scene -->
     <a-scene xr-mode-ui="XRMode: ar;" webxr="optionalFeatures:  dom-overlay;">
-       <!-- ar-hit-test="target: #myobject;" -->
+      <!-- ar-hit-test="target: #myobject;" -->
       <a-assets>
         <img id="ChloeBild" src="src\26130.png" alt="" />
         <video
@@ -70,7 +52,7 @@
         position="0.01361 1 -1"
       >
       </a-entity>
-<!--       <a-text
+      <!--       <a-text
         geometry="primitive: plane; height: 0.35; width: 1.49"
         position="0 1 -0.9"
         value="Hello, World!"
@@ -80,5 +62,23 @@
         material="opacity: 0.5; color: #ffffff; emissive: #000000"
       ></a-text> -->
     </a-scene>
+    <!--     Overlay HTML -->
+    <div class="fixed bottom-0 z-10 flex algin-center justify-center w-full">
+      <div class="grid grid-col-2 mb-5">
+        <h1 class="col-span-2 text-center">Was willst du tun?</h1>
+        <button class="pr-5">Frage beantworten</button>
+        <button class="">Geschichte hören</button>
+      </div>
+    </div>
+
+    <div class="fixed bottom-5 left-5">
+      <p>
+        <a
+          href="https://www.freepik.com/free-vector/tree-transparent-background_20424342.htm#query=tree%20transparent&position=1&from_view=search&track=ais&uuid=ab3d83fa-029f-4fdd-b2b4-67156b5a246d#position=1&query=tree%20transparent"
+          >Image by brgfx</a
+        >
+        on Freepik on Freepik
+      </p>
+    </div>
   </body>
 </html>

@@ -5,37 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A-Frame WebXR Test</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.6/dist/aframe-transparent-video-shader.umd.js"></script>
-    <script src="app.js"></script>
   </head>
   <body>
     <a-scene xr-mode-ui="XRMode: ar;" webxr="optionalFeatures:  hit-test;" ar-hit-test="target:#myobject;">
       <a-assets>
-<!--         <video
-          id="CAdemoWEBM"
-          src="src\movie-webm.webm"
-          type="video/webm"
-        ></video> -->
-        <video
-          id="CAdemoMP4"
-          src="src\231208_CharacterAnimator_Demo.mp4"
-          type="video/mp4"
-        ></video>
+        <img id="ChloeBild" src="src\Szene - Chloe (Photoshop) 4 Frame.png" alt="">
       </a-assets>
       <a-camera position="0 1.2 6"></a-camera>
-      <a-cone id="myobject" color="blue"></a-cone>
-<!--       <a-video id="myobject" src="#CAdemoMP4" position="0 1 -2"></a-video> -->
-<!--       <a-entity
-        
-        class="tpVid"
-        material="shader: transparent-video; src: #CAdemoWEBM"
-        geometry="primitive: plane;
-                    width: 2;
-                    height: 2"
-        position="-2 1 -2.1"
-      >
-      </a-entity> -->
+      <a-image src="#ChloeBild"></a-image>
+
     </a-scene>
   </body>
 </html>

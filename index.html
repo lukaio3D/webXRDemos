@@ -6,6 +6,7 @@
     <title>A-Frame WebXR Test</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.6/dist/aframe-transparent-video-shader.umd.js"></script>
+    <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="app.js"></script>
   </head>
@@ -19,8 +20,8 @@
         <img id="ChloeBild" src="src\Szene - Chloe (Photoshop) 4 Frame.png" alt="">
         <video
           id="CAdemoWEBM"
-          src="src\movie-webm.webm"
-          type="video/webm"
+          src="src\Chloe-Intro.mp4"
+          type="video/MP4"
           autoplay
         ></video>
       </a-assets>
@@ -29,9 +30,9 @@
       <a-entity
         id="transparentVid"
         class="tpVid"
-        material="shader: transparent-video; src: #CAdemoWEBM"
+        material="shader: chromakey; src: #CAdemoWEBM; color: 0.1 0.9 0.2"
         geometry="primitive: plane;
-                    width: 2;
+                    width: 4;
                     height: 2"
         position="-2 1 -2.1"
       >

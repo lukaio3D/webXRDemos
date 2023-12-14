@@ -7,6 +7,7 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.6/dist/aframe-transparent-video-shader.umd.js"></script>
     <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="app.js"></script>
   </head>
@@ -14,10 +15,7 @@
     <!--     Overlay HTML -->
     <div class="fixed bottom-5 left-5">
       <p>
-        <a
-          href="https://www.freepik.com/free-vector/isolated-tree-white-background_4382376.htm#query=tree%20transparent&position=9&from_view=search&track=ais&uuid=ab3d83fa-029f-4fdd-b2b4-67156b5a246d"
-          >Image by brgfx</a
-        >
+        <a href="https://www.freepik.com/free-vector/tree-transparent-background_20424342.htm#query=tree%20transparent&position=1&from_view=search&track=ais&uuid=ab3d83fa-029f-4fdd-b2b4-67156b5a246d#position=1&query=tree%20transparent">Image by brgfx</a> on Freepik
         on Freepik
       </p>
     </div>
@@ -25,7 +23,7 @@
     <a-scene xr-mode-ui="XRMode: ar;">
       <!-- webxr="optionalFeatures:  hit-test;" ar-hit-test="target: #myobject;" -->
       <a-assets>
-        <img id="ChloeBild" src="src\tree_Illustration.png" alt="" />
+        <img id="ChloeBild" src="src\26130.png" alt="" />
         <video
           id="CAdemoWEBM"
           src="src\Chloe-Intro.mp4"
@@ -33,13 +31,14 @@
           autoplay
         ></video>
       </a-assets>
+      <a-entity environment="preset: forest"></a-entity>
       <a-camera position="0 1.2 6"></a-camera>
       <a-image
         id="myobject-2"
         src="#ChloeBild"
         material=""
         geometry=""
-        position="1.58155 1.67412 -5"
+        position="1.58155 1.67412 -2"
         scale="3.34484 3.34484 3.34484"
       ></a-image>
       <a-image
@@ -47,7 +46,7 @@
         src="#ChloeBild"
         material=""
         geometry=""
-        position="-1.72712 1.674 -4.023"
+        position="-1.72712 1.674 -2.2"
         scale="3.345 3.345 3.345"
       ></a-image>
       <a-entity
@@ -57,7 +56,7 @@
         geometry="primitive: plane;
                     width: 4;
                     height: 2"
-        position="0.01361 1 -1.24417"
+        position="0.01361 1 -1"
       >
       </a-entity>
     </a-scene>

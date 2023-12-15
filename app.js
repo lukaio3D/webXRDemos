@@ -22,7 +22,7 @@ const uiBtn1 = document.getElementById("uiBtn1");
 const uiBtn2 = document.getElementById("uiBtn2");
 const videoPlayer = document.querySelector("video");
 const elephant = document.getElementById("elephantEntity");
-const otherTree = document.getElementById("otherTree");
+const BaumIn3D = document.getElementById("BaumIn3D");
 
 let seqCounter = 0;
 
@@ -33,14 +33,16 @@ switch (seqCounter) {
       if(seqCounter == 0){
         videoPlayer.play();
         ui.style.visibility = "hidden";
+        setTimeout(seqCounter++, 30000)
+        ;
       }
       if(seqCounter == 1){
-        otherTree.setAttribute("visible", "true");
+        BaumIn3D.setAttribute("visible", "true");
         console.log("Button1 gedrückt");
       }
 
     });
-    seqCounter++;
+
 
   /* Frage Sequenz */
   case 1:

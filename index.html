@@ -9,29 +9,32 @@
     <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-
   </head>
   <body>
     <!--     Overlay HTML -->
-
-    <div id="overlay" class="fixed bottom-0 z-10 flex algin-center justify-center w-full">
-      <div class="grid grid-col-2 mb-5">
-        <h1 class="col-span-2 text-center">Was willst du tun?</h1>
-        <button class="pr-5">Frage beantworten</button>
-        <button id="geschichteButton" class="">Geschichte hören</button>
+    <div id="overlay" class="w-screen h-screen">
+      <div class="fixed bottom-0 z-10 flex algin-center justify-center w-full">
+        <div class="grid grid-col-2 mb-5">
+          <h1 class="col-span-2 text-center">Was willst du tun?</h1>
+          <button class="pr-5">Frage beantworten</button>
+          <button id="geschichteButton" class="">Geschichte hören</button>
+        </div>
+      </div>
+      <div class="fixed z-10">
+        <p>
+          <a
+            href="https://www.freepik.com/free-vector/tree-transparent-background_20424342.htm#query=tree%20transparent&position=1&from_view=search&track=ais&uuid=ab3d83fa-029f-4fdd-b2b4-67156b5a246d#position=1&query=tree%20transparent"
+            >Image by brgfx</a
+          >
+          on Freepik on Freepik
+        </p>
       </div>
     </div>
-    <div class="fixed z-10">
-      <p>
-        <a
-          href="https://www.freepik.com/free-vector/tree-transparent-background_20424342.htm#query=tree%20transparent&position=1&from_view=search&track=ais&uuid=ab3d83fa-029f-4fdd-b2b4-67156b5a246d#position=1&query=tree%20transparent"
-          >Image by brgfx</a
-        >
-        on Freepik on Freepik
-      </p>
-    </div>
     <!--     A-Frame Scene -->
-    <a-scene xr-mode-ui="XRMode: ar;" webxr="optionalFeatures:  dom-overlay; overlayElement: #overlay;">
+    <a-scene
+      xr-mode-ui="XRMode: ar;"
+      webxr="optionalFeatures:  dom-overlay; overlayElement: #overlay;"
+    >
       <!-- ar-hit-test="target: #myobject;" -->
       <a-assets>
         <img id="ChloeBild" src="src\26130.png" alt="" />

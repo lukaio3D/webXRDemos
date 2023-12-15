@@ -13,26 +13,44 @@
   <body>
     <!--     Overlay HTML -->
     <div id="overlay" class="!p-0 z-10">
-      <button id="creditBtn" class="bg-slate-100 bg-opacity-20 rounded-lg m-2 p-2">Credits</button>
-      <ul id="credits" class=" p-3 bg-slate-100 bg-opacity-20 rounded-lg m-2 p-2 list-disc">
+      <button
+        id="creditBtn"
+        class="bg-slate-100 bg-opacity-20 rounded-lg m-2 p-2"
+      >
+        Credits
+      </button>
+      <ul
+        id="credits"
+        style="visibility: hidden"
+        class="p-3 pl-6 bg-slate-100 bg-opacity-20 rounded-lg m-2 p-2 list-disc"
+      >
         <li>
-          "Elephant" (https://skfb.ly/D9qS) by Jakub Badin is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). <br>
-          </li>
-          <li>
-          <a href="https://www.freepik.com/free-vector/isolated-tree-white-background_4382376.htm#query=tree&position=3&from_view=search&track=sph&uuid=a173ac4f-2c13-4eff-be33-071846853017">Image by brgfx</a> on Freepik
+          "Elephant" (https://skfb.ly/D9qS) by Jakub Badin is licensed under
+          Creative Commons Attribution
+          (http://creativecommons.org/licenses/by/4.0/). <br />
+        </li>
+        <li>
+          <a
+            href="https://www.freepik.com/free-vector/isolated-tree-white-background_4382376.htm#query=tree&position=3&from_view=search&track=sph&uuid=a173ac4f-2c13-4eff-be33-071846853017"
+            >Image by brgfx</a
+          >
+          on Freepik
         </li>
       </ul>
       <div class="fixed bottom-5 flex algin-center w-full justify-center">
         <div
+          id="ui"
           class="flex flex-col gap-2 bg-slate-100 bg-opacity-20 rounded-lg p-4"
         >
-          <h1 class="col-span-2 text-center">Was kann ich für dich tun?</h1>
-          <button class="bg-slate-500 rounded-lg p-2">
-            Erzähle mir etwas über dich
-          </button>
+          <h1 id="uiHeader" class="col-span-2 text-center">
+            Aktiviere den AR Modus mit dem Button rechts. <br />
+            Starte die Interaktion mit Start
+          </h1>
+          <button id="uiBtn1" class="bg-slate-500 rounded-lg p-2">Start</button>
           <button
+            style="display: none"
             class="bg-slate-500 rounded-lg p-2"
-            id="geschichteButton"
+            id="uiBtn2"
             class=""
           >
             Zeige mir einen Elefanten
@@ -48,6 +66,7 @@
       <!-- ar-hit-test="target: #myobject;" -->
       <a-assets>
         <img id="ChloeBild" src="src\26130.png" alt="" />
+        <img id="otherTree" src="src\36471.png" alt="" />
         <video
           id="CAdemoWEBM"
           src="src\Chloe-Intro.mp4"
@@ -73,6 +92,16 @@
         position="-1.72712 1.674 -2.2"
         scale="3.345 3.345 3.345"
       ></a-image>
+      <a-image
+        visible ="false";
+        id="otherTree"
+        src="#otherTree"
+        material=""
+        geometry=""
+        position="-1.57165 1.27535 -0.76347"
+        scale="2.77696 2.77696 2.77696"
+        rotation="0 37.87823983609872 0"
+      ></a-image>
       <a-entity
         id="transparentVid"
         class="tpVid"
@@ -83,14 +112,15 @@
         position="0.01361 1 -1"
       >
       </a-entity>
+
       <a-gltf-model
-      id="elephantEntity"
+        id="elephantEntity"
         visible="false"
         src="#3Delephant"
         gltf-model="src\elephant.glb"
-        position="5.95324 1.23552 -0.46094"
-        scale="3.01682 3.01682 3.01682"
-        rotation="0 -45.206370035821955 0"
+        position="1.73524 0.47308 -1.7582"
+        scale="1.05111 1.05111 1.05111"
+        rotation="0 32.28559879782676 0"
       ></a-gltf-model>
       <!--       <a-text
         geometry="primitive: plane; height: 0.35; width: 1.49"

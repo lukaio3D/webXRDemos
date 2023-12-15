@@ -92,7 +92,18 @@
       </a-assets>
       <a-entity hide-on-enter-ar environment="preset: forest"></a-entity>
       <a-camera position="0 1.2 6"></a-camera>
-      <a-light type="ambient" color="#222"></a-light>
+      <a-entity
+        class="environment"
+        position="0 50 0"
+        light="type: hemisphere; color: #92dacf; intensity: 0.6; groundColor: #937a24"
+        visible=""
+      ></a-entity>
+      <a-entity
+        class="environment"
+        position="-1.2 0.88 -0.55"
+        light="intensity: 0.6; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10"
+        visible=""
+      ></a-entity>
       <a-image
         hide-on-enter-ar
         id="myobject-2"

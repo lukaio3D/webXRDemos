@@ -34,12 +34,14 @@ uiBtn1.addEventListener("click", function () {
 
 uiBtn2.addEventListener("click", function () {
   elephant.setAttribute("visible", "true");
+  videoPlayer.pause();
   videoPlayer.setAttribute("src", "src/Elefant.mp4")
   videoPlayer.play();
 });
 
 uiBtn3.addEventListener("click", function () {
   BaumIn3D.setAttribute("visible", "true");
+  videoPlayer.pause();
   videoPlayer.setAttribute("src", "src/Steine.mp4")
   videoPlayer.play();
 });

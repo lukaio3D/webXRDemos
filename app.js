@@ -20,40 +20,36 @@ const ui = document.getElementById("ui");
 const uiHdr = document.getElementById("uiHeader");
 const uiBtn1 = document.getElementById("uiBtn1");
 const uiBtn2 = document.getElementById("uiBtn2");
+const uiBtn3 = document.getElementById("uiBtn3");
 const videoPlayer = document.querySelector("video");
 const elephant = document.getElementById("elephantEntity");
 const BaumIn3D = document.getElementById("BaumIn3D");
 
-let seqCounter = 0;
+uiBtn1.addEventListener("click", function () {
+  videoPlayer.play();
+  ui.style.visibility = "hidden";
+  uiBtn1.style.display = "none";
 
-switch (seqCounter) {
-  /* Intro Sequenz */
-  case 0:
-    uiBtn1.addEventListener("click", function () {
-      if(seqCounter == 0){
-        videoPlayer.play();
-        ui.style.visibility = "hidden";
-        setTimeout(seqCounter++, 30000)
-        ;
-      }
-      if(seqCounter == 1){
-        BaumIn3D.setAttribute("visible", "true");
-        console.log("Button1 gedrückt");
-      }
+});
 
-    });
+uiBtn2.addEventListener("click", function () {
+  elephant.setAttribute("visible", "true");
+  videoPlayer.setAttribute("src", "src/Elefant.mp4")
+  videoPlayer.play();
+});
 
+uiBtn3.addEventListener("click", function () {
+  BaumIn3D.setAttribute("visible", "true");
+  videoPlayer.setAttribute("src", "src/Steine.mp4")
+  videoPlayer.play();
+});
 
-  /* Frage Sequenz */
-  case 1:
-    videoPlayer.onpause = function () {
-      uiHdr.innerHTML = "Was möchtest du von mir?";
-      uiBtn1.innerHTML = "Zeige mir einen Baum";
-      uiBtn2.innerHTML = "Zeige mir einen Elefanten";
-      uiBtn2.style.display = "block";
-      ui.style.visibility = "visible";
-      uiBtn2.addEventListener("click", function () {
-        elephant.setAttribute("visible", "true");
-      });
-    };
-}
+videoPlayer.onpause = function () {
+
+  uiHdr.innerHTML = "Was kann ich für dich tun?";
+  uiBtn3.innerHTML = "Zeige mir eine Steinformation";
+  uiBtn2.innerHTML = "Zeige mir einen Elefanten";
+  uiBtn2.style.display = "block";
+  uiBtn3.style.display = "block";
+  ui.style.visibility = "visible";
+};

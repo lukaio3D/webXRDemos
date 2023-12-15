@@ -22,7 +22,7 @@
       <ul
         id="credits"
         style="visibility: hidden"
-        class="p-3 pl-6 bg-slate-100 bg-opacity-20 rounded-lg m-2 p-2 list-disc"
+        class="p-3 pl-6 bg-slate-100 bg-opacity-50 rounded-lg m-2 p-2 list-disc"
       >
         <li>
           "Elephant" (https://skfb.ly/D9qS) by Jakub Badin is licensed under
@@ -50,14 +50,21 @@
           class="flex flex-col gap-2 bg-slate-100 bg-opacity-20 rounded-lg p-4"
         >
           <h1 id="uiHeader" class="col-span-2 text-center">
-            Aktiviere den AR Modus mit dem Button rechts. <br />
-            Starte die Interaktion mit Start
+            Starte die Interaktion wenn du bereit bist.
           </h1>
           <button id="uiBtn1" class="bg-slate-500 rounded-lg p-2">Start</button>
           <button
             style="display: none"
             class="bg-slate-500 rounded-lg p-2"
             id="uiBtn2"
+            class=""
+          >
+            Zeige mir einen Elefanten
+          </button>
+          <button
+            style="display: none"
+            class="bg-slate-500 rounded-lg p-2"
+            id="uiBtn3"
             class=""
           >
             Zeige mir einen Elefanten
@@ -76,7 +83,7 @@
         <img id="otherTree" src="src\8976.png" alt="" />
         <video
           id="CAdemoWEBM"
-          src="src\Chloe-Intro.mp4"
+          src="src\Intro.mp4"
           type="video/MP4"
         ></video>
         <a-asset-item id="3Delephant" src="src\elephant.glb"></a-asset-item>
@@ -84,6 +91,7 @@
       <a-entity hide-on-enter-ar environment="preset: forest"></a-entity>
       <a-camera position="0 1.2 6"></a-camera>
       <a-image
+        hide-on-enter-ar
         id="myobject-2"
         src="#ChloeBild"
         material=""
@@ -92,6 +100,7 @@
         scale="3.34484 3.34484 3.34484"
       ></a-image>
       <a-image
+        hide-on-enter-ar
         id="myobject-2"
         src="#ChloeBild"
         material=""
@@ -114,7 +123,7 @@
         class="tpVid"
         material="shader: chromakey; src: #CAdemoWEBM; color: 0.1 0.9 0.2"
         geometry="primitive: plane;
-                    width: 4;
+                    width: 2;
                     height: 2"
         position="0.01361 1 -1"
       >
@@ -125,19 +134,10 @@
         visible="false"
         src="#3Delephant"
         gltf-model="src\elephant.glb"
-        position="1.73524 0.47308 -1.7582"
-        scale="1.05111 1.05111 1.05111"
-        rotation="0 32.28559879782676 0"
+        position="1.32585 0.473 -1.89785"
+        scale="1.051 1.051 1.051"
+        rotation="0 32.286 0"
       ></a-gltf-model>
-      <!--       <a-text
-        geometry="primitive: plane; height: 0.35; width: 1.49"
-        position="0 1 -0.9"
-        value="Hello, World!"
-        text="align: center; color: #ffffff; opacity: 1.04"
-        visible=""
-        scale="0.5 0.5 1"
-        material="opacity: 0.5; color: #ffffff; emissive: #000000"
-      ></a-text> -->
     </a-scene>
   </body>
   <script src="app.js"></script>

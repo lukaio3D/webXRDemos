@@ -29,25 +29,27 @@ uiBtn1.addEventListener("click", function () {
   videoPlayer.play();
   ui.style.visibility = "hidden";
   uiBtn1.style.display = "none";
-
 });
 
 uiBtn2.addEventListener("click", function () {
-  elephant.setAttribute("visible", "true");
   videoPlayer.pause();
-  videoPlayer.setAttribute("src", "src/Elefant.mp4")
+  videoPlayer.setAttribute("src", "src/Elefant.mp4");
   videoPlayer.play();
+  setTimeout(function () {
+    elephant.setAttribute("visible", "true");
+  }, 1800);
 });
 
 uiBtn3.addEventListener("click", function () {
-  BaumIn3D.setAttribute("visible", "true");
   videoPlayer.pause();
-  videoPlayer.setAttribute("src", "src/Steine.mp4")
+  videoPlayer.setAttribute("src", "src/Steine.mp4");
   videoPlayer.play();
+  setTimeout(function () {
+    BaumIn3D.setAttribute("visible", "true");
+  }, 2000);
 });
 
 videoPlayer.onpause = function () {
-
   uiHdr.innerHTML = "Was kann ich für dich tun?";
   uiBtn3.innerHTML = "Zeige mir eine Steinformation";
   uiBtn2.innerHTML = "Zeige mir einen Elefanten";
